@@ -1,0 +1,19 @@
+docker-compose-yaml: docker-compose.yml
+
+project: dpl-poc-redak-vb
+
+tasks:
+  post-rollout:
+    - run:
+        name: drush deploy
+        command: drush deploy
+        service: cli
+
+environments:
+  mains:
+    # routes:
+    cronjobs:
+      - name: drush cron
+        schedule: "*/15 * * * *"
+        command: drush cron
+        service: cli
