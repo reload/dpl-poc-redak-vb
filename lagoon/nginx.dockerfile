@@ -1,1 +1,1 @@
-FROM ghcr.io/reload/dpl-poc-nginx:2.0.2
+FROM ghcr.io/reload/dpl-poc-base-core-nginx:1.0.3
